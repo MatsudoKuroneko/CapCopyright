@@ -1,0 +1,5 @@
+node_modules/
+testpic/
+
+yarn.lock
+yarn-error.log

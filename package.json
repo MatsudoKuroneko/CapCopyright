@@ -1,0 +1,12 @@
+{
+  "name": "CWrite",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.2"
+  },
+  "scripts": {
+    "start": "node main.js"
+  }
+}
