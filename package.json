@@ -4,7 +4,8 @@
   "main": "main.js",
   "license": "MIT",
   "dependencies": {
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "canvas": "*"
   },
   "scripts": {
     "start": "node main.js"
