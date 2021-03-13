@@ -1,5 +1,7 @@
 node_modules/
-testpic/
 
-yarn.lock
-yarn-error.log
+*.lock
+*.log
+*.otf
+*.jpg
+*.png

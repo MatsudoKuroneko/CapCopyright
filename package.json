@@ -4,8 +4,9 @@
   "main": "main.js",
   "license": "MIT",
   "dependencies": {
-    "request": "^2.88.2",
-    "canvas": "*"
+    "canvas": "*",
+    "chokidar": "^3.5.1",
+    "request": "^2.88.2"
   },
   "scripts": {
     "start": "node main.js"
