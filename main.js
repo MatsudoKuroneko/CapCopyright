@@ -10,16 +10,14 @@ var pname = "";
 
 registerFont('Makinas-4-Square.otf', { family: 'Makinas 4 Square' })
 
-const canvas = createCanvas(1440,810);
+const canvas = createCanvas(1440,810);// 出力されるアスペクト比
 const ctx = canvas.getContext("2d");
 
 
 function help(){
     console.log("Usage: npm start commands");
     console.log("Most used commands");
-    console.log("   create - [RECCOMEND] Create Capture with freetext and program title.");
-    console.log("   onlyid - Create Capture with program title");
-    console.log("   onlytext - Create Capture with freetext");
+    console.log("   create <freetext> <channel> <fontsize> - [RECCOMEND] Create Capture with freetext and program title.");
     console.log("   listId - list all Channel IDs");
     console.log("   listChannel - list all Channel IDs");
 }
@@ -60,22 +58,21 @@ function getId() {
     }))
 };
 
-<<<<<<< HEAD
 function stamp(f){
     loadImage(f).then((image) => {
         ctx.drawImage(image, 0, 0);
-        ctx.font = "bold 36px 'Makinas 4 Square'";
+        ctx.font = "bold " + fontsize + "px 'Makinas 4 Square'";
         ctx.textAlign = "end";
         ctx.strokeStyle = "white";
         ctx.fillStyle = "black";
         ctx.lineWidth = 2;
-        ctx.strokeText("出典:  " + copy + " /",1430 + 2,794 - 48 + 2);
+        ctx.strokeText("出典:  " + copy,1430 + 2,794 - fontsize * 1.25 + 2);
         ctx.strokeText(pname,1430 + 2,794 + 2);
-        ctx.fillText("出典:  " + copy + " /",1430 + 2,794 - 48 + 2);
+        ctx.fillText("出典:  " + copy,1430 + 2,794 - fontsize * 1.25 + 2);
         ctx.fillText(pname,1430 + 2,794 + 2);
-        ctx.strokeText("出典:  " + copy + " /",1430,794 - 48);
+        ctx.strokeText("出典:  " + copy,1430,794 - fontsize * 1.25);
         ctx.strokeText(pname,1430,794);
-        ctx.fillText("出典:  " + copy + " /",1430,794 - 48);
+        ctx.fillText("出典:  " + copy,1430,794 - fontsize * 1.25);
         ctx.fillText(pname,1430,794);
 
 
@@ -106,8 +103,6 @@ function watch(){
             .on("unlink",f => console.log(`file ${f} has been removed`));
 }
 
-=======
->>>>>>> origin/master
 function getProgramName() {
     request.get({
         url: "http://192.168.0.98:8888/api/schedule/broadcasting?time=0",
@@ -116,15 +111,10 @@ function getProgramName() {
         if (err) {
             throw err;
         } else {
-<<<<<<< HEAD
             pname = body.find(element => element.channel.id == ch).programs[0].name;
             console.log(pname);
             //console.log(body[0].programs);
             watch();
-=======
-            console.log(body.find(element => element.channel.id == thi).programs[0].name);
-            //console.log(body[0].programs);
->>>>>>> origin/master
         }
 
     }))
@@ -142,11 +132,3 @@ if (sec == "help") {
 }else{
     help();
 }
-
-
-<<<<<<< HEAD
-//出典:  プロジェクトラブライブ!虹ヶ咲学園スクールアイドル同好会 / ラブライブ!虹ヶ咲学園スクールアイドル同好会 第10話「夏、はじまる」
-//出典:  プロジェクトラブライブ!虹ヶ咲学園スクールアイドル同好会 / ラブライブ!虹ヶ咲学園スクールアイドル同好会 第2話「Cutest♡ガール」
-=======
-//出典: ラブライブ!虹ヶ咲学園スクールアイドル同好会 第10話「夏、はじまる
->>>>>>> origin/master
